@@ -6,12 +6,16 @@ class MusicFilter {
 
 
   apply(trackArray) {
-    if (trackArray[0] < this.minValue) {
-      return [this.minValue]
-    } else if (trackArray[0] > this.maxValue) {
-      return [this.maxValue]
-    }
-    return trackArray
+    return trackArray.map(number => {
+      if (number < this.minValue) {
+        return this.minValue;
+      } else if (number > this.maxValue) {
+        return this.maxValue
+      }
+      return number
+    })
+
+
     // throw 'Input is invalid';
   }
 }

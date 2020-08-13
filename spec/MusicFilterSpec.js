@@ -17,6 +17,11 @@ describe("MusicFilter", function() {
     expect(musicFilter.apply([999])).toEqual([999])
   })
 
+  it("applies default minimum value filter for an array of integers", function() {
+    expect(musicFilter.apply([39, 20, 1])).toEqual([40, 40, 40])
+    expect(musicFilter.apply([39, 40, 41, 1])).toEqual([40, 40, 41, 40])
+  })
+
 
   xit("throw an error for non number values", function() {
     expect(function() { musicFilter.apply(['40']) }).toThrow("Input is invalid");
