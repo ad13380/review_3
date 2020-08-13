@@ -8,6 +8,13 @@ describe("MusicFilter", function() {
   it("applies default minimum value filter for a single integer", function() {
     expect(musicFilter.apply([39])).toEqual([40])
     expect(musicFilter.apply([42])).toEqual([42])
+    expect(musicFilter.apply([40])).toEqual([40])
+  })
+
+  it("applies default maximum value filter for a single integer", function() {
+    expect(musicFilter.apply([1001])).toEqual([1000])
+    expect(musicFilter.apply([1000])).toEqual([1000])
+    expect(musicFilter.apply([999])).toEqual([999])
   })
 
 
