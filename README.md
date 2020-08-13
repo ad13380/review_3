@@ -7,3 +7,6 @@ band pass - only vertain range min and max value
 [40,100,1000,1005], 40, 1000 ----> [40,100,1000,1000]
 may be a float, or contain strange values  (raise an error)
 default range: 40, 1000
+
+INPUT     OUTPUT
+['40']    An error
