@@ -9,4 +9,7 @@ may be a float, or contain strange values  (raise an error)
 default range: 40, 1000
 
 INPUT     OUTPUT
+[39]      [40]
+[42]      [42]
+
 ['40']    An error
