@@ -1,6 +1,6 @@
 class MusicFilter {
-  constructor() {
-    this.minValue = 40;
+  constructor(minValue = 40) {
+    this.minValue = minValue;
     this.maxValue = 1000;
   }
 

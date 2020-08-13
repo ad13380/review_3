@@ -9,6 +9,8 @@ may be a float, or contain strange values  (raise an error)
 default range: 40, 1000
 
 INPUT     OUTPUT
+default filter values
+====
 [39]      [40]
 [42]      [42]
 [40]      [40]
@@ -21,4 +23,10 @@ INPUT     OUTPUT
 [1001, 999, 1000, 800] [1000, 999, 1000, 800]
 [1001, 999, 40, 39] [1000, 999, 40, 40]
 
+minimum filter value = 30
+=====
+[29]    [30]
+[39, 30, 29]  [39, 30, 30]
+
+=====
 ['40']    An error
