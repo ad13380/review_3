@@ -37,6 +37,12 @@ describe("MusicFilter", function() {
     expect(musicFilter.apply([39, 30, 29])).toEqual([39, 30, 30])
   })
 
+  it("applies given minimum filter value for an array of integers", function() {
+    musicFilter = new MusicFilter(30)
+    expect(musicFilter.apply([29])).toEqual([30])
+    expect(musicFilter.apply([39, 30, 29])).toEqual([39, 30, 30])
+  })
+
 
   xit("throw an error for non number values", function() {
     expect(function() { musicFilter.apply(['40']) }).toThrow("Input is invalid");
